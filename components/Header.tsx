@@ -15,9 +15,9 @@ import { Menu, X } from 'lucide-react'
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
   return (
-    <header className='fixed top-0 w-full p-6 md:p-2 lg:px-12 text-white flex justify-between items-center z-50 bg-transparent backdrop-blur-sm'>
+    <header className='fixed top-0 w-full p-2 md:p-2 lg:px-12 text-white flex justify-between items-center z-50 bg-transparent backdrop-blur-sm'>
         <div className='flex items-center gap-3 cursor-pointer hover:text-primary-hover'>
-            <Image src='/Logo.webp' alt='Herbode Logo' width='100' height='100' className='rounded'/>
+            <Image src='/Logo.png' alt='Herbode Logo' width='110' height='110' className='rounded'/>
         </div>
 
         <nav className='hidden md:flex items-center space-x-6'>

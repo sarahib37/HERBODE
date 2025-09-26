@@ -1,26 +1,85 @@
-"use client"
+import React from 'react'
+import { Box, Button, Flex, Text, VStack, Icon } from '@chakra-ui/react'
+import Link from 'next/link'
+import Image from 'next/image'
+import {FaDonate, FaFemale, FaGlobeAfrica} from 'react-icons/fa'
+import { LuTarget } from 'react-icons/lu'
 
-import { Button, Flex, Text, useBreakpointValue } from "@chakra-ui/react";
-import React from "react";
+type Props = {}
 
-export default function Hero() {
+export default function Hero({}: Props) {
   return (
-    <div
-      className="relative w-full h-[auto] md:h-[100vh] pb-[2em] md:pb-[.5em] text-center flex flex-col items-center font-center justify-center text-primary bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/Hero.webp')" }}
-    >
-      <Flex flexDir='column' width={useBreakpointValue({base: '90%', md: '50%'})} gap='1em' shadow='sm' background="linear-gradient(135deg, #618361, white, #618361)" padding='1.5em' mt={useBreakpointValue({base: '8em', md:'6em'})}>
-        <h1 className="text-5xl font-bold drop-shadow-lg z-30">For <span className="italic">women</span>, by <span className="italic">women</span>, and with <span className="italic">women</span></h1>
-        <div>
-        <p>{`"The connections between and among women are the most feared, the most problematic, and the most potentially transforming force on the planet."`}</p>
-          <Text fontWeight='bold' fontStyle='italic'>Adrienne Rich</Text>
-        </div>
+    <Box bg='#1f4f2f'>
+        <Flex direction={{ base: 'column', md: 'row' }} align={{ base: 'center', md: 'stretch' }} justify="space-between">
+            <Box flex='1' bg='#efe6c8' w="100%" px={{ base: 4, sm: 6, md: 12, lg: 16 }} pt={{ base: 8, md: '6em', lg: '8em' }} textAlign={{ base: 'center', md: 'left' }}>
+                <Text as='h1' fontSize={{ base: '1xl', sm: '2xl', md: '4xl', lg: '5xl', xl: '6xl' }} lineHeight='1.2' letterSpacing='wide' mb={{ base: 4, md: 6 }} color='#1f4f2f'>
+                    Her Future <br/>Begins With <br/>An Education.
+                </Text>
 
-        <Flex justifyContent='center' alignItems='center' gap={useBreakpointValue({base:'1em', md:'3em'})} flexDir={useBreakpointValue({base: 'column', md:'row'})}>
-          <Button p='1em' _hover={{bg: 'black', transform: 'scale(1.05)', transition: "all 0.3s ease-in-out"}}>Read our Blog</Button>
-          <Button p='1em' _hover={{bg: 'black', transform: 'scale(1.05)', transition: "all 0.3s ease-in-out"}}>Join us</Button>
+                <Text fontSize={{ base: 'sm', sm: 'md', md: 'lg', lg: 'xl' }} mb={{ base: 4, md: 6 }} color='#49514a' width='100%'>
+                    We are educating girls, breaking barriers and opening doors. Join us in giving more girls the chance to learn and thrive.
+                </Text>
+
+                <Button  bg='#254f33' borderRadius='2xl' color='white' display='block' margin='auto' px='1.2em' fontSize={{ base: 'sm', sm: 'md', md: 'lg' }} fontWeight='bold' boxShadow='lg' w={{ base: '100%', sm: 'auto' }} mx={{ base: 'auto', md: '0' }} _hover={{'color':'#254f33', 'bg':'#efe6c8'}}>Educate A Girl Child.</Button>
+
+                <Text color='#49514a' my='1em' fontSize={{ base: 'xs', sm: 'sm', md: 'md', lg: 'lg' }} letterSpacing='.1em'>
+                    <Link href={'/sea'} passHref legacyBehavior>
+                        <span className='bg-transparent'>Instagram</span>
+                    </Link> · 
+                    <Link href={'/sea'} passHref legacyBehavior>
+                        <span className='bg-transparent'> Twitter</span>
+                    </Link> · 
+                    <Link href={'/sea'} passHref legacyBehavior>
+                        <span className='bg-transparent'> LinkedIn</span>
+                    </Link> 
+                </Text>
+            </Box>
+
+            <Box mt={{ base: 6, md: '4em', lg: '6em' }} textAlign="center" w={{ base: '100%', md: '50%' }}>
+                <Image src='/hero.png' alt='consent' width={620} height={700} style={{ maxWidth: '100%', height: 'auto' }}/>
+            </Box>
         </Flex>
-      </Flex>
-    </div>
-  );
+        <Box mx='auto' bg='#b85b2a'  borderRadius='sm' overflow='hidden' boxShadow='lg'>
+        <Flex
+          px={{ base: 4, sm: 6, md: 12, lg: 16 }}
+          py={{ base: 6, md: 8 }}
+          justify="space-evenly"
+          align="center"
+          direction={{ base: 'column', sm: 'row' }}
+          gap={{ base: 6, sm: 0 }}
+        >
+          <Stat icon={FaGlobeAfrica} value="3" label="States" />
+          <Stat icon={FaDonate} value="100+" label="Donations" />
+          <Stat icon={FaFemale} value="5" label="Girls Reached" />
+          <Stat icon={LuTarget} value="100+" label="Waiting Girls" />
+        </Flex>
+      </Box>
+    </Box>
+  )
+}
+
+function Stat({
+    icon,
+    value,
+    label,
+    }: {
+    icon: any
+    value: string
+    label: string
+    }) {
+    return (
+        <VStack>
+        <Flex gap={3} alignItems="center">
+            <Icon as={icon} boxSize={{ base: 8, sm: 10, md: 12 }} color="white" />
+            <Flex flexDirection="column" textAlign="left">
+            <Text as="h1" fontSize={{ base: 'sm', sm: 'md', md: 'lg' }} color="white">
+                {value}
+            </Text>
+            <Text fontSize={{ base: 'xs', sm: 'sm', md: 'md' }} color="whiteAlpha.800">
+                {label}
+            </Text>
+            </Flex>
+        </Flex>
+        </VStack>
+    )
 }

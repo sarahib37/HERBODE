@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lora } from "next/font/google";
+import { Lora, Amiri } from "next/font/google";
 import "./globals.css";
 import Header from '../components/Header'
 import { Provider } from "@/components/ui/provider.jsx";
 
-const playfair = Playfair_Display({
+const amiri = Amiri({
   variable: "--font-playfair",
   subsets: ["latin"],
-  weight: ["400", "500", "700"], 
+  weight: ["400", "700"], 
 });
 
 const lora = Lora({
@@ -31,7 +31,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/TickTockLogo.webp" sizes="any" />
       </head>
-      <body className={`${playfair.variable} ${lora.variable} antialiased`}>
+      <body className={`${amiri.variable} ${lora.variable} antialiased`}>
        <Provider>
           <Header/>
           <div>{children}</div>

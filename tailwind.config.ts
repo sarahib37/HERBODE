@@ -10,7 +10,7 @@ export default {
   theme: {
   	extend: {
 		fontFamily: {
-			heading: ["var(--font-playfair)", "Playfair Display", "sans-serif"],
+			heading: ["var(--font-amiri)", "Amiri", "sans-serif"],
 			primary: ["var(--font-lora)", "Lora", "serif"]
 		},
 		screens: {
@@ -22,7 +22,7 @@ export default {
 
   		colors: {
   			background: {
-				DEFAULT: '#212D29',
+				DEFAULT: '#efe6c8',
 			},
 			primary: {
 				DEFAULT: '#74723C',

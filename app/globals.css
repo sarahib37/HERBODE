@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-primary bg-background text-primary leading-loose text-[1.2em]
+    @apply font-heading bg-background text-primary leading-loose text-[1.2em]
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -36,7 +36,7 @@
   }
   
   button, a {
-    @apply bg-button-bg text-button leading-loose
+    @apply font-primary bg-button-bg text-button leading-loose
   }
 
   .markdown-content h1 {
