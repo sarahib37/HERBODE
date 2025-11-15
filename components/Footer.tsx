@@ -47,9 +47,6 @@ export default function Footer({}: Props) {
               <VStack align='flex-start' gap={3}>
                 <Text fontWeight='bold'>Connect With Us</Text>
                 <HStack gap={4}>
-                <Link href={'mailto:info@herbode.org'} className="bg-transparent" target="_blank" rel="noopener noreferrer">
-                    <Icon as={FaMailBulk} boxSize={10} color='#14291b' />
-                  </Link>
                   <Link href={'https://www.instagram.com/officialherbode/'} className="bg-transparent" target="_blank" rel="noopener noreferrer">
                     <Icon as={FaInstagram} boxSize={10} color='#14291b' />
                   </Link>
