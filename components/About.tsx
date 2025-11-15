@@ -25,7 +25,7 @@ export default function About({}: Props) {
         <Flex w={{ base: "100%", md: "80%", lg: "60%" }} align='center' mx='auto' mb={{ base: 6, md: 8 }} justify={{ base: "center", sm: "center", md: "space-around" }} direction={{ base: 'column', sm: 'row' }} gap={4}>
           <Link href={'https://forms.gle/2SPXubVcQWnKMn8M6'} passHref legacyBehavior>
             <Button bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
-              Join Our Community
+              Join Our Community.
           </Button>
           </Link>
           <Button bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
