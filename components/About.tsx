@@ -1,5 +1,6 @@
 import { Box, Button, Flex, Heading, Text } from '@chakra-ui/react'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
@@ -22,13 +23,17 @@ export default function About({}: Props) {
         </Flex>
 
         <Flex w={{ base: "100%", md: "80%", lg: "60%" }} align='center' mx='auto' mb={{ base: 6, md: 8 }} justify={{ base: "center", sm: "center", md: "space-around" }} direction={{ base: 'column', sm: 'row' }} gap={4}>
-          {['Join Our Community', 'Read Our Blog.', 'Support Us.'].map(
-            (label, i) => (
-              <Button key={i} bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
-                {label}
-              </Button>
-            )
-          )}
+          <Link href={'https://forms.gle/2SPXubVcQWnKMn8M6'} passHref legacyBehavior>
+            <Button bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
+              Join Our Community
+          </Button>
+          </Link>
+          <Button bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
+            Read Our Blog.
+          </Button>
+          <Button bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
+            Support Us.
+          </Button>
         </Flex>
 
         <Flex direction={{ base: "column", md: "column", lg: "row" }} align={{ base: "center", md: "center", lg: "start" }} justify="space-between" px={{ base: 4, sm: 6, md: 8 }} gap={{ base: 6, md: 10 }}>

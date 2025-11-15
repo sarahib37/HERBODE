@@ -23,13 +23,13 @@ export default function Hero({}: Props) {
                 <Button  bg='#254f33' borderRadius='2xl' color='white' display='block' margin='auto' px='1.2em' fontSize={{ base: 'sm', sm: 'md', md: 'lg' }} fontWeight='bold' boxShadow='lg' w={{ base: '100%', sm: 'auto' }} mx={{ base: 'auto', md: '0' }} _hover={{'color':'#254f33', 'bg':'#efe6c8'}}>Educate A Girl Child.</Button>
 
                 <Text color='#49514a' my='1em' fontSize={{ base: 'xs', sm: 'sm', md: 'md', lg: 'lg' }} letterSpacing='.1em'>
-                    <Link href={'/sea'} passHref legacyBehavior>
+                    <Link href={'https://www.instagram.com/officialherbode/'} passHref legacyBehavior>
                         <span className='bg-transparent'>Instagram</span>
                     </Link> · 
-                    <Link href={'/sea'} passHref legacyBehavior>
+                    <Link href={'https://x.com/herbode'} passHref legacyBehavior>
                         <span className='bg-transparent'> Twitter</span>
                     </Link> · 
-                    <Link href={'/sea'} passHref legacyBehavior>
+                    <Link href={'https://www.linkedin.com/company/herbode/'} passHref legacyBehavior>
                         <span className='bg-transparent'> LinkedIn</span>
                     </Link> 
                 </Text>
