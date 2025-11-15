@@ -76,7 +76,7 @@ export default function Header() {
             </Link>
             
             <Link 
-              href="/about" 
+              href="/#about" 
               onClick={() => setIsOpen(false)} 
               className="text-2xl text-white font-semibold hover:text-accent transition-all p-3"
             >
@@ -92,7 +92,7 @@ export default function Header() {
             </Link> 
 
             <Link 
-              href="/contact" 
+              href="/#contact" 
               onClick={() => setIsOpen(false)} 
               className="text-2xl text-white font-semibold hover:text-accent transition-all p-3"
             >
