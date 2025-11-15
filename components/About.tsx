@@ -26,11 +26,15 @@ export default function About({}: Props) {
           <Link href={'https://forms.gle/2SPXubVcQWnKMn8M6'} passHref legacyBehavior>
             <Button bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
               Join Our Community.
-          </Button>
+            </Button>
           </Link>
-          <Button bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
-            Read Our Blog.
-          </Button>
+
+          <Link href={'/blog'} passHref legacyBehavior>
+            <Button bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
+              Read Our Blog.
+            </Button>
+          </Link>
+          
           <Button bg="#254f33" borderRadius="2xl" color="white" px="1.2em" fontSize={{ base: "md", sm: "lg", md: "1.15em" }} fontWeight="bold" boxShadow="lg" _hover={{ color: '#254f33', bg: '#efe6c8' }}>
             Support Us.
           </Button>

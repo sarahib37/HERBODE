@@ -32,7 +32,7 @@ export default function Header() {
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                        <Link href='#about' legacyBehavior passHref>
+                        <Link href='/#about' legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                 About
                             </NavigationMenuLink>
@@ -48,7 +48,7 @@ export default function Header() {
                     </NavigationMenuItem>
 
                     <NavigationMenuItem>
-                        <Link href='#contact' legacyBehavior passHref>
+                        <Link href='/#contact' legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                 Contact
                             </NavigationMenuLink>
