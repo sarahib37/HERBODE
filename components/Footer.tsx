@@ -2,13 +2,13 @@ import { Box, Flex, HStack, Icon, Span, Text, VStack } from '@chakra-ui/react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import { FaEnvelope, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhoneAlt, FaTwitter } from 'react-icons/fa'
+import { FaEnvelope, FaInstagram, FaLinkedin, FaMailBulk, FaMapMarkerAlt, FaPhoneAlt, FaTwitter } from 'react-icons/fa'
 
 type Props = {}
 
 export default function Footer({}: Props) {
   return (
-    <Box bg='#d2a857' color='#14291b' py={8} px={{ base: 4, md: 8, lg: "5em" }}>
+    <Box bg='#d2a857' id='contact' color='#14291b' py={8} px={{ base: 4, md: 8, lg: "5em" }}>
           <Flex direction={{ base: "column", md: "row" }} justify='space-between' align={{ base: "flex-start", md: "center" }} mx='auto' gap={{ base: 8, md: 6 }}>
               <VStack maxW={{ base: "100%", md: "50%" }} align="flex-start" gap={3}>
                 <Flex align='flex-start' justify='left' width='100%'>
@@ -27,14 +27,14 @@ export default function Footer({}: Props) {
                   </Link>
                 </HStack>
 
-                <HStack>
+                {/* <HStack>
                   <Flex  p='.3em' borderRadius='50%' bg='transparent' border='1px solid #14291b' color='#14291b'>
                     <Icon as={FaPhoneAlt} boxSize={15}/>
                   </Flex>
                   <Link href='tel:+2348182287842' className="bg-transparent">
                   <Text color="#14291b">+234 818 228 7842</Text>
                   </Link>
-                </HStack>
+                </HStack> */}
 
                 <HStack>
                   <Flex  p='.3em' borderRadius='50%' bg='transparent' border='1px solid #14291b' color='#14291b'>
@@ -47,13 +47,16 @@ export default function Footer({}: Props) {
               <VStack align='flex-start' gap={3}>
                 <Text fontWeight='bold'>Connect With Us</Text>
                 <HStack gap={4}>
-                  <Link href='mailto:info@herbode.org' className="bg-transparent" target="_blank" rel="noopener noreferrer">
+                <Link href={'mailto:info@herbode.org'} className="bg-transparent" target="_blank" rel="noopener noreferrer">
+                    <Icon as={FaMailBulk} boxSize={10} color='#14291b' />
+                  </Link>
+                  <Link href={'https://www.instagram.com/officialherbode/'} className="bg-transparent" target="_blank" rel="noopener noreferrer">
                     <Icon as={FaInstagram} boxSize={10} color='#14291b' />
                   </Link>
-                  <Link href='mailto:info@herbode.org' className="bg-transparent" target="_blank" rel="noopener noreferrer">
+                  <Link href={'https://x.com/herbode'} className="bg-transparent" target="_blank" rel="noopener noreferrer">
                     <Icon as={FaTwitter} boxSize={10} color='#14291b'/>
                   </Link>
-                  <Link href='mailto:info@herbode.org' className="bg-transparent" target="_blank" rel="noopener noreferrer">
+                  <Link href={'https://www.linkedin.com/company/herbode/'} className="bg-transparent" target="_blank" rel="noopener noreferrer">
                     <Icon as={FaLinkedin} boxSize={10} color='#14291b'/>
                   </Link>
                 </HStack>

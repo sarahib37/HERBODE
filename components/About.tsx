@@ -7,7 +7,7 @@ type Props = {}
 
 export default function About({}: Props) {
   return (
-    <Box bg='#efe6c8' py={{ base: 10, md: 16 }}>
+    <Box bg='#efe6c8' py={{ base: 10, md: 16 }} id='about'>
         <Flex direction={{ base: "column", md: "column", lg: "row" }} align={{ base: "center", md: "center", lg: "start" }} justify="space-between" px={{ base: 4, sm: 6, md: 8 }} mb={{ base: 8, md: 10 }} gap={{ base: 6, md: 8 }}>
           <Box flex='1' maxW={{ base: "100%", md: "80%", lg: "70%" }} px={{ base: 2, md: 6 }}>
             <Heading as='h2' size={{ base: "lg", sm: "xl", md: "2xl" }}mb={4} color='#254f33' textDecoration='underline' textUnderlineOffset='.3em'> About Us.</Heading>

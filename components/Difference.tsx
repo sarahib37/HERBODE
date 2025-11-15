@@ -43,7 +43,7 @@ export default function Difference({}: Props) {
           </Box>
         </Flex>
 
-        <Button bg='#b85b2a' color='white' display='block' mx='auto'mt={{ base: 6, md: 10 }} px={{ base: 6, sm: 8 }} fontSize={{ base: "md", sm: "lg", md: "1.15em" }}fontWeight='bold' boxShadow='lg' _hover={{'color':'#f34418', 'bg':'#efe6c8'}} borderRadius='2xl'>Donate Here</Button>
+        <Button bg='#b85b2a' color='white' display='block' mx='auto'mt={{ base: 6, md: 10 }} px={{ base: 6, sm: 8 }} fontSize={{ base: "md", sm: "lg", md: "1.15em" }}fontWeight='bold' boxShadow='lg' _hover={{'color':'#b85b2a', 'bg':'#efe6c8'}} borderRadius='2xl'>Donate Here</Button>
     </Box>
   )
 }
